@@ -8,7 +8,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { useState } from "react";
-import { TiWeatherDownpour, TiWeatherSunny } from "react-icons/ti";
+import { RiEmotionHappyLine, RiEmotionUnhappyLine } from "react-icons/ri";
 import { getStudentData } from "../api/actions";
 
 const StudentCard: React.FC = () => {
@@ -73,19 +73,19 @@ const StudentCard: React.FC = () => {
         <CardBody>
           <div className="flex flex-col items-center">
             <h1 className="text-3xl font-bold">{data.student}</h1>
-            {data.CN6000 > 20 ? (
+            {data.CN6000 > 10 ? (
               <div>
-                <TiWeatherSunny className="w-36 h-36" />
+                <RiEmotionHappyLine className="w-36 h-36" />
               </div>
             ) : (
               <div>
-                <TiWeatherDownpour className="w-36 h-36" />
+                <RiEmotionUnhappyLine className="w-36 h-36" />
               </div>
             )}
-            <p className="text-3xl font-bold">{data.CN6000}°C</p>
-            <p className="text-lg">Humidity: {data.CN6035}%</p>
-            <p className="text-lg">Wind: {data.CN6008} km/h</p>
-            <p className="text-lg">Rain: {data.CN6005} %</p>
+            <p className="text-xl">CN6000: {data.CN6000}%</p>
+            <p className="text-lg">CN6035: {data.CN6035}%</p>
+            <p className="text-lg">CN6008: {data.CN6008}%</p>
+            <p className="text-lg">CN6005: {data.CN6005}%</p>
           </div>
         </CardBody>
       ) : (
