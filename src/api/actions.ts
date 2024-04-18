@@ -1,25 +1,25 @@
 import axios, { AxiosError } from "axios";
 
-const API_URL = "https://obscure-dollop-rx4grv5q5w9cxp4v-3000.app.github.dev/";
+const API_URL = "https://urban-space-disco-9x79q4gr46q2g6w-3000.app.github.dev/api";
 
-export const getWeatherData = async (city: string): Promise<WeatherData> => {
-  return new Promise<WeatherData>((resolve, reject) => {
+export const getStudentData = async (student: string): Promise<StudentData> => {
+  return new Promise<StudentData>((resolve, reject) => {
     axios
-      .get(`${API_URL}/weather/${city}`)
+      .get(`${API_URL}/student/${student}`)
       .then((res) => {
         resolve({
-          city: city,
-          temperature: res.data.temperature,
-          humidity: res.data.humidity,
-          wind: res.data.wind,
-          rain: res.data.rain,
+          student: student,
+          CN6000: res.data.CN6000,
+          CN6035: res.data.CN6035,
+          CN6008: res.data.CN6008,
+          CN6005: res.data.CN6005,
         });
       })
       .catch((error) => {
         if (axios.isAxiosError(error)) {
           const axiosError = error as AxiosError;
           if (axiosError.response?.status === 404) {
-            reject("City not found");
+            reject("student not found");
           } else {
             // It's a good practice to reject with an Error object
             reject(axiosError.message);
