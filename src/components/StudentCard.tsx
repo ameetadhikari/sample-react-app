@@ -73,7 +73,7 @@ const StudentCard: React.FC = () => {
         <CardBody>
           <div className="flex flex-col items-center">
             <h1 className="text-3xl font-bold">{data.student}</h1>
-            {data.CN6000 > 10 ? (
+            {data.CN6000 > 50 && data.CN6035 > 50 && data.CN6008 > 50 && data.CN6005 > 50 ? (
               <div>
                 <RiEmotionHappyLine className="w-36 h-36" />
               </div>
@@ -91,7 +91,7 @@ const StudentCard: React.FC = () => {
       ) : (
         <CardBody>
           <div className="flex flex-col items-center">
-            <p className="text-xl font-bold">Please enter a city</p>
+            <p className="text-xl font-bold">Please enter a student name</p>
           </div>
         </CardBody>
       )}
