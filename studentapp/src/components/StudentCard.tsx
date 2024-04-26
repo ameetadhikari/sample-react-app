@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import { RiEmotionHappyLine, RiEmotionUnhappyLine } from "react-icons/ri";
 import { getStudentData } from "../api/actions";
+import React from "react";
 
 const StudentCard: React.FC = () => {
   const [data, setData] = useState<StudentData>();

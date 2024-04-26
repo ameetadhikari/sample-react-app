@@ -1,0 +1,2 @@
+beaker-pyteal==0.6.1
+pyteal==0.23.0
