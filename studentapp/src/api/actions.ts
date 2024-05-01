@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-const API_URL = "https://urban-space-disco-9x79q4gr46q2g6w-3000.app.github.dev/api";
+const API_URL = "https://automatic-space-garbanzo-rx4grv5qwjvf59q4-3000.app.github.dev/api";
 
 export const getStudentData = async (student: string): Promise<StudentData> => {
   return new Promise<StudentData>((resolve, reject) => {

@@ -1,4 +1,5 @@
 import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
+import React from "react";
 import { MdApi } from "react-icons/md";
 
 const NavBar = () => {
